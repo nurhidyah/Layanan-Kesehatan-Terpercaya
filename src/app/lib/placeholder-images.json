@@ -1,0 +1,53 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-hospital",
+      "description": "Modern hospital building exterior",
+      "imageUrl": "https://picsum.photos/seed/pc1/1200/600",
+      "imageHint": "hospital building"
+    },
+    {
+      "id": "about-hospital",
+      "description": "Hospital interior lobby",
+      "imageUrl": "https://picsum.photos/seed/pc2/800/600",
+      "imageHint": "hospital lobby"
+    },
+    {
+      "id": "doctor-1",
+      "description": "Male specialist doctor",
+      "imageUrl": "https://picsum.photos/seed/dr1/400/500",
+      "imageHint": "male doctor"
+    },
+    {
+      "id": "doctor-2",
+      "description": "Female specialist doctor",
+      "imageUrl": "https://picsum.photos/seed/dr2/400/500",
+      "imageHint": "female doctor"
+    },
+    {
+      "id": "doctor-3",
+      "description": "Professional medical team",
+      "imageUrl": "https://picsum.photos/seed/dr3/400/500",
+      "imageHint": "medical team"
+    },
+    {
+      "id": "service-cardio",
+      "description": "Cardiology equipment",
+      "imageUrl": "https://picsum.photos/seed/sv1/600/400",
+      "imageHint": "cardiology"
+    },
+    {
+      "id": "service-pediatric",
+      "description": "Pediatric ward",
+      "imageUrl": "https://picsum.photos/seed/sv2/600/400",
+      "imageHint": "pediatrics"
+    },
+    {
+      "id": "service-surgery",
+      "description": "Operating room",
+      "imageUrl": "https://picsum.photos/seed/sv3/600/400",
+      "imageHint": "surgery room"
+    }
+  ]
+}
