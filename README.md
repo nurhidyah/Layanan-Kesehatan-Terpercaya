@@ -36,9 +36,8 @@ Ikuti langkah-langkah berikut di terminal Anda untuk mengunggah kode ini ke GitH
 5. **Hubungkan ke repositori GitHub Anda**:
    *Pastikan Anda sudah membuat repositori kosong di GitHub terlebih dahulu.*
    ```bash
-   git remote add origin https://github.com/USERNAME/REPOSITORY-NAME.git
+   git remote add origin https://github.com/nurhidyah/Layanan-Kesehatan-Terpercaya.git
    ```
-   *(Ganti USERNAME dan REPOSITORY-NAME sesuai dengan akun Anda)*
 
 6. **Unggah kode ke GitHub**:
    ```bash
