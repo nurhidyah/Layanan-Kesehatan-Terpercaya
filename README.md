@@ -11,27 +11,36 @@ Ini adalah prototipe aplikasi web Rumah Sakit PrimaCare yang dibangun menggunaka
 
 ## Cara Mengunggah ke GitHub
 
-1. Inisialisasi Git:
+Ikuti langkah-langkah berikut di terminal Anda untuk mengunggah kode ini ke GitHub:
+
+1. **Inisialisasi repositori Git lokal**:
    ```bash
    git init
    ```
 
-2. Tambahkan semua file:
+2. **Tambahkan semua file ke area staging**:
    ```bash
    git add .
    ```
 
-3. Lakukan commit pertama:
+3. **Lakukan commit pertama**:
    ```bash
-   git commit -m "Initial commit: PrimaCare Hospital App"
+   git commit -m "Initial commit: PrimaCare Hospital App with Appointment System"
    ```
 
-4. Hubungkan ke repositori Anda:
+4. **Ubah nama branch utama menjadi 'main'**:
    ```bash
-   git remote add origin https://github.com/USERNAME/REPOSTORY-NAME.git
+   git branch -M main
    ```
 
-5. Unggah kode:
+5. **Hubungkan ke repositori GitHub Anda**:
+   *Pastikan Anda sudah membuat repositori kosong di GitHub terlebih dahulu.*
+   ```bash
+   git remote add origin https://github.com/USERNAME/REPOSITORY-NAME.git
+   ```
+   *(Ganti USERNAME dan REPOSITORY-NAME sesuai dengan akun Anda)*
+
+6. **Unggah kode ke GitHub**:
    ```bash
    git push -u origin main
    ```
@@ -43,3 +52,4 @@ Ini adalah prototipe aplikasi web Rumah Sakit PrimaCare yang dibangun menggunaka
 - **Genkit** (AI Framework)
 - **Tailwind CSS** (Styling)
 - **Lucide React** (Icons)
+- **ShadCN UI** (Components)
