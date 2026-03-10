@@ -1,3 +1,7 @@
+
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -13,6 +17,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/app/lib/placeholder-images';
+import { AppointmentDialog } from '@/components/AppointmentDialog';
 
 const featuredServices = [
   { icon: Heart, title: 'Kardiologi', desc: 'Layanan kesehatan jantung komprehensif dengan teknologi terkini.' },
@@ -22,10 +27,13 @@ const featuredServices = [
 ];
 
 export default function Home() {
+  const [appointmentOpen, setAppointmentOpen] = useState(false);
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-hospital');
 
   return (
     <div className="flex flex-col w-full">
+      <AppointmentDialog open={appointmentOpen} onOpenChange={setAppointmentOpen} />
+      
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center overflow-hidden">
         <Image
@@ -46,11 +54,15 @@ export default function Home() {
               PrimaCare Hospital menghadirkan standar medis internasional dengan layanan yang ramah dan profesional.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8 py-6 rounded-full">
+              <Button 
+                size="lg" 
+                onClick={() => setAppointmentOpen(true)}
+                className="bg-accent hover:bg-accent/90 text-lg px-8 py-6 rounded-full"
+              >
                 Janji Temu
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20 text-lg px-8 py-6 rounded-full">
-                Lihat Layanan
+              <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20 text-lg px-8 py-6 rounded-full">
+                <Link href="/services">Lihat Layanan</Link>
               </Button>
             </div>
           </div>
@@ -81,7 +93,11 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Janji Temu</h3>
                   <p className="text-muted-foreground mb-4">Pesan jadwal konsultasi dengan dokter spesialis.</p>
-                  <Button variant="link" className="p-0 h-auto text-accent font-bold hover:no-underline">
+                  <Button 
+                    variant="link" 
+                    className="p-0 h-auto text-accent font-bold hover:no-underline"
+                    onClick={() => setAppointmentOpen(true)}
+                  >
                     Daftar Online <ArrowRight className="ml-1 h-4 w-4" />
                   </Button>
                 </div>
@@ -125,8 +141,8 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-12">
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white rounded-full">
-              Lihat Semua Layanan
+            <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white rounded-full">
+              <Link href="/services">Lihat Semua Layanan</Link>
             </Button>
           </div>
         </div>

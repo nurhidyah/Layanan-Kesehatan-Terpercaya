@@ -1,0 +1,47 @@
+
+{
+  "entities": {
+    "Doctor": {
+      "title": "Doctor",
+      "description": "Medical specialist profiles.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "specialization": { "type": "string" },
+        "experience": { "type": "string" },
+        "education": { "type": "string" },
+        "imgId": { "type": "string" }
+      },
+      "required": ["name", "specialization"]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Patient appointment records.",
+      "type": "object",
+      "properties": {
+        "patientName": { "type": "string", "description": "Full name of the patient." },
+        "patientEmail": { "type": "string", "format": "email" },
+        "patientPhone": { "type": "string" },
+        "appointmentDate": { "type": "string", "format": "date-time" },
+        "doctorName": { "type": "string" },
+        "complaint": { "type": "string", "description": "Patient's medical complaint." },
+        "status": { "type": "string", "enum": ["pending", "confirmed", "completed", "cancelled"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["patientName", "appointmentDate", "doctorName", "complaint"]
+    }
+  },
+  "auth": {
+    "providers": ["google.com"]
+  },
+  "firestore": {
+    "/doctors/{doctorId}": {
+      "schema": "#/backend/entities/Doctor",
+      "description": "Collection of doctors."
+    },
+    "/appointments/{appointmentId}": {
+      "schema": "#/backend/entities/Appointment",
+      "description": "Collection of patient appointments."
+    }
+  }
+}
