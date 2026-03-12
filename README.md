@@ -9,18 +9,18 @@ Ini adalah prototipe aplikasi web Rumah Sakit PrimaCare yang dibangun menggunaka
 - **Informasi Layanan**: Daftar departemen medis dan tim dokter ahli.
 - **Responsif**: Tampilan optimal di perangkat mobile maupun desktop.
 
-## Cara Mengunggah ke GitHub
+## Cara Mengunggah ke GitHub (Solusi Error Fatal)
 
-Buka terminal Anda di folder proyek ini dan jalankan perintah berikut secara berurutan:
+Jika Anda menemui error "fatal: remote origin already exists" atau "fatal: repository", jalankan perintah berikut secara berurutan di terminal Anda:
 
 1. **Inisialisasi ulang Git**:
    ```bash
    git init
    ```
 
-2. **Hapus remote lama (PENTING jika muncul error 'remote origin already exists')**:
+2. **Hapus remote lama yang bermasalah**:
    ```bash
-   git remote remove origin 2>/dev/null || true
+   git remote remove origin
    ```
 
 3. **Hubungkan ke repositori GitHub Anda**:
@@ -38,20 +38,16 @@ Buka terminal Anda di folder proyek ini dan jalankan perintah berikut secara ber
    git commit -m "Initial commit: PrimaCare Hospital App"
    ```
 
-6. **Unggah ke GitHub**:
+6. **Atur branch dan Unggah**:
    ```bash
    git branch -M main
    git push -u origin main
    ```
 
-## Solusi Error (Troubleshooting)
+## Solusi Error Umum
 
-- **Error: `fatal: remote origin already exists`**:
-  Jalankan `git remote remove origin`, lalu ulangi langkah `git remote add origin ...`.
-- **Error: `fatal: repository '...' not found`**:
-  Pastikan Anda sudah membuat repositori bernama **Layanan-Kesehatan-Terpercaya** secara manual di akun GitHub Anda (github.com/new).
-- **Error: `Permission denied`**:
-  Pastikan Anda sudah login ke GitHub di terminal menggunakan GitHub CLI (`gh auth login`) atau memasukkan Personal Access Token (PAT) jika diminta.
+- **Error: `Permission denied`**: Pastikan Anda sudah login ke GitHub di terminal atau menggunakan GitHub CLI (`gh auth login`).
+- **Error: `repository not found`**: Pastikan Anda sudah membuat repositori bernama **Layanan-Kesehatan-Terpercaya** secara manual di akun GitHub Anda sebelum menjalankan perintah di atas.
 
 ## Teknologi yang Digunakan
 
