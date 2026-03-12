@@ -13,12 +13,12 @@ Ini adalah prototipe aplikasi web Rumah Sakit PrimaCare yang dibangun menggunaka
 
 Buka terminal Anda di folder proyek ini dan jalankan perintah berikut secara berurutan:
 
-1. **Inisialisasi ulang Git** (jika belum):
+1. **Inisialisasi ulang Git**:
    ```bash
    git init
    ```
 
-2. **Hapus remote lama (jika ada error 'remote origin already exists')**:
+2. **Hapus remote lama (PENTING jika muncul error 'remote origin already exists')**:
    ```bash
    git remote remove origin 2>/dev/null || true
    ```
