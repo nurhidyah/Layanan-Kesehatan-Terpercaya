@@ -11,7 +11,7 @@ Ini adalah prototipe aplikasi web Rumah Sakit PrimaCare yang dibangun menggunaka
 
 ## Cara Mengunggah ke GitHub
 
-Buka terminal Anda di folder proyek ini dan jalankan perintah berikut secara berurutan:
+Buka terminal Anda di folder proyek ini dan jalankan perintah berikut secara berurutan untuk menghubungkan ke repositori Anda:
 
 1. **Inisialisasi repositori Git lokal**:
    ```bash
